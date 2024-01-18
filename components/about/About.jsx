@@ -33,7 +33,7 @@ export default function About() {
                   <Image
                     width={300}
                     height={400}
-                    src="/assets/img/about-1/1.png"
+                    src="/assets/img/home-1/hero/1.webp"
                     alt="image"
                   />
                 </div>
@@ -41,7 +41,7 @@ export default function About() {
                   <Image
                     width={200}
                     height={200}
-                    src="/assets/img/about-1/2.png"
+                    src="/assets/img/home-1/hero/2.webp"
                     alt="image"
                   />
                 </div>
@@ -49,7 +49,7 @@ export default function About() {
                   <Image
                     width={255}
                     height={250}
-                    src="/assets/img/about-1/3.png"
+                    src="/assets/img/home-1/hero/3.webp"
                     alt="image"
                   />
                 </div>

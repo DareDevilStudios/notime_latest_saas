@@ -10,10 +10,10 @@ import masthead_icon_1 from "../../../public/assets/img/masthead/icons/1.svg";
 import masthead_icon_2 from "../../../public/assets/img/masthead/icons/2.svg";
 import masthead_icon_3 from "../../../public/assets/img/masthead/icons/3.svg";
 // move img and icon
-import move_img_1 from "../../../public/assets/img/masthead/1.png";
+import move_img_1 from "../../../public/assets/img/home-1/hero/1.webp";
 
-import move_img_2 from "../../../public/assets/img/masthead/2.png";
-import move_img_3 from "../../../public/assets/img/masthead/3.png";
+import move_img_2 from "../../../public/assets/img/home-1/hero/2.webp";
+import move_img_3 from "../../../public/assets/img/home-1/hero/3.webp";
 import move_icon_1 from "../../../public/assets/img/masthead/1.svg";
 import move_icon_2 from "../../../public/assets/img/masthead/4.png";
 import move_icon_3 from "../../../public/assets/img/masthead/2.svg";
@@ -162,6 +162,7 @@ const HomeHero = () => {
               </div>
             </div>
 
+            {/* images */}
             <div
               className="col-xl-6 col-lg-6"
               data-aos="fade-up"
@@ -185,9 +186,9 @@ const HomeHero = () => {
                     </div>
                     <div className="ml-20">
                       <div className="text-orange-1 text-16 fw-500 lh-1">
-                        3.000 +
+                        Short Courses
                       </div>
-                      <div className="mt-3">Free Courses</div>
+                      <div className="mt-3">To make you a Freelancer</div>
                     </div>
                   </div>
                 </div>
@@ -204,12 +205,12 @@ const HomeHero = () => {
                     data-move="60"
                     className="lg:d-none img-el -w-260 px-20 py-20 d-flex items-center bg-white rounded-8 js-mouse-move"
                   >
-                    <Image src={move_icon_2} alt="icon" />
+                    {/* <Image src={move_icon_2} alt="icon" /> */}
                     <div className="ml-20">
                       <div className="text-dark-1 text-16 fw-500 lh-1">
-                        Ali Tufan
+                        Thrisha Kannan
                       </div>
-                      <div className="mt-3">UX/UI Designer</div>
+                      <div className="mt-3">Full Stack Developer</div>
                       <div className="d-flex x-gap-5 mt-3">
                         {starts.map((start, index) => (
                           <div key={index}>
