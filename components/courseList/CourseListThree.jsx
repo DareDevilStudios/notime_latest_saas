@@ -183,7 +183,7 @@ export default function CourseListThree() {
             <div className="row">
               <div className="col-auto">
                 <div>
-                  <h1 className="page-header__title">User Interface Courses</h1>
+                  <h1 className="page-header__title">Our Courses</h1>
                 </div>
 
                 <div>
@@ -200,7 +200,9 @@ export default function CourseListThree() {
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="accordion js-accordion">
-            <div
+
+            {/* filter */}
+            {/* <div
               className={`accordion__item ${filterOpen ? "is-active" : ""} `}
             >
               <div className="row y-gap-20 items-center justify-between pb-30">
@@ -746,7 +748,7 @@ export default function CourseListThree() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="row y-gap-30">

@@ -1,6 +1,7 @@
 "use client";
 
 import "../public/assets/sass/styles.scss";
+import "../public/assets/css/main.css"
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";

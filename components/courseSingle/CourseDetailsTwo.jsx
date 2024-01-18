@@ -18,10 +18,13 @@ const menuItems = [
 ];
 
 export default function CourseDetailsTwo({ id }) {
+  console.log(id)
   const [pageItem, setPageItem] = useState(coursesData[0]);
 
   useEffect(() => {
-    setPageItem(coursesData.filter((elm) => elm.id == id)[0] || coursesData[0]);
+    const data = coursesData.filter((elm) => elm.id == id)[0] || coursesData[0];
+    console.log(data);
+    setPageItem(data);
   }, []);
 
   return (
