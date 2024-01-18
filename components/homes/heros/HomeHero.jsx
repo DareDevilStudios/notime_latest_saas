@@ -37,12 +37,13 @@ const masthead_info = [
 ];
 
 const hero_content = {
-  title: "Learn New Skills Online with Top",
-  text_underline: "Educators",
+  title:  "Learn, Create, Succeed with ",
+  text_underline: "NoTime",
   info_hero: (
     <>
-      Build skills with courses, certificates, and degrees online from
-      <br /> world-class universities and companies.
+      Explore expertise through NoTime's dynamic courses, certifications,
+      <br/>
+      and hands-on projects offered by top-tier educators and industry leaders.
     </>
   ),
   starts: [
