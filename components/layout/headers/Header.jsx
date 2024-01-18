@@ -20,24 +20,28 @@ export default function Header() {
           <div className="row justify-between items-center">
             <div className="col-auto">
               <div className="header-left">
-                <div className="header__logo ">
+                <div className="header__logo">
                   <Link href="/">
-                    {/*<Image*/}
-                    {/*  width={140}*/}
-                    {/*  height={50}*/}
-                    {/*  src="/assets/img/general/logo.svg"*/}
-                    {/*  alt="logo"*/}
-                    {/*/>*/}
-                    <h3 className={"text-white"}>NoTime</h3>
+                    <div className="flex items-center w-full">
+                      <Image
+                        width={80}
+                        height={50}
+                        src="/assets/new_logo.png"
+                        alt="logo"
+                      />
+                      <h3 className={"text-white md:text-3xl text-xl"}>
+                        NoTime
+                      </h3>
+                    </div>
                   </Link>
                 </div>
 
                 {/* header explore start */}
-                <HeaderExplore
+                {/* <HeaderExplore
                   allClasses={
                     "header__explore text-green-1 ml-60 xl:ml-30 xl:d-none"
                   }
-                />
+                /> */}
                 {/* header explore end */}
               </div>
             </div>
@@ -52,7 +56,7 @@ export default function Header() {
               <div className="header-right d-flex items-center">
                 <div className="header-right__icons text-white d-flex items-center">
                   {/* search toggle start */}
-                  <SearchToggle />
+                  {/* <SearchToggle /> */}
                   {/* search toggle end */}
 
                   {/* cart toggle start */}

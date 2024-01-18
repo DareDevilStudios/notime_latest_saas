@@ -48,7 +48,7 @@ export default function Menu({ allClasses, headerPosition }) {
         </div>
 
         <div className="menu js-navList">
-          <ul className={`${allClasses ? allClasses : ""}`}>
+          <ul className={`flex gap-8 ${allClasses ? allClasses : ""}`}>
             <li className="menu-item-has-children">
               <Link
                 data-barba
@@ -81,10 +81,20 @@ export default function Menu({ allClasses, headerPosition }) {
               </ul> */}
             </li>
 
+            <li className="menu-item-has-children">
+              <Link
+                data-barba
+                href="/#aboutus"
+                className={menuItem == "Pages" ? "activeMenu" : ""}
+              >
+                About Us
+              </Link>
+            </li>
+
             <li className="menu-item-has-children -has-mega-menu">
               <Link
                 data-barba
-                href="/courses-list-1"
+                href="/courses-list-3"
                 className={menuItem == "Courses" ? "activeMenu" : ""}
               >
                 Courses 
@@ -222,7 +232,7 @@ export default function Menu({ allClasses, headerPosition }) {
               </div> */}
             </li>
 
-            <li className="menu-item-has-children">
+            {/* <li className="menu-item-has-children">
               <Link
                 data-barba
                 href="#"
@@ -252,9 +262,9 @@ export default function Menu({ allClasses, headerPosition }) {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
 
-            <li className="menu-item-has-children">
+            {/* <li className="menu-item-has-children">
               <Link
                 data-barba
                 href="#"
@@ -284,8 +294,7 @@ export default function Menu({ allClasses, headerPosition }) {
                   </li>
                 ))}
               </ul>
-            </li>
-
+            </li> */}
             <li className="menu-item-has-children">
               <Link
                 data-barba
