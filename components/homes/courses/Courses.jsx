@@ -24,16 +24,19 @@ export default function Courses() {
         <div className="col-auto">
           <div className="sectionTitle ">
             <h2 className="sectionTitle__title sm:text-24">
-              Our Most Popular Courses
+              Our Courses
             </h2>
 
-            <p className="sectionTitle__text ">
+            {/* <p className="sectionTitle__text ">
               10,000+ unique online course list designs
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
-      <div className="tabs__controls flex-wrap  pt-50 d-flex justify-center x-gap-10 js-tabs-controls">
+
+      {/* categories */}
+
+      {/* <div className="tabs__controls flex-wrap  pt-50 d-flex justify-center x-gap-10 js-tabs-controls">
         {catagories.map((elm, i) => (
           <div onClick={() => setCategory(elm)} key={i}>
             <button
@@ -47,7 +50,7 @@ export default function Courses() {
             </button>
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div
         className="pt-60 m-auto row y-gap-30 container pl-0 pr-0"

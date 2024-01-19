@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function About() {
   return (
     <>
-      <section className="page-header -type-1">
+      <section id="aboutus" className="page-header -type-1">
         <div className="container">
           <div className="page-header__content">
             <div className="row justify-center text-center">
@@ -58,18 +58,22 @@ export default function About() {
 
             <div className="col-lg-5">
               <h2 className="text-30 lh-16">
-                Welcome to Educrat Enhance your skills with best Online courses
+                Welcome to NoTime, Enhance your skills with best Online courses
               </h2>
               <p className="text-dark-1 mt-30">
-                You can start and finish one of these popular courses in under a
-                day – for free! Check out the list below.. Take the course for
-                free
+                At Notime, we are on a mission to redefine education. Our focus
+                goes beyond textbooks and theories, emphasizing practical
+                learning and hands-on experiences. By providing quality
+                education through innovative programs, mentorship, and exposure
+                to real-world projects, we prepare our students for success in
+                the professional arena. Our curated approach, coupled with a
+                commitment to creating a community of lifelong learners, sets
+                Notime apart as a catalyst for personal and professional growth.
               </p>
               <p className="pr-50 lg:pr-0 mt-25">
-                Neque convallis a cras semper auctor. Libero id faucibus nisl
-                tincidunt egetnvallis a cras semper auctonvallis a cras semper
-                aucto. Neque convallis a cras semper auctor. Liberoe convallis a
-                cras semper atincidunt egetnval
+                Join us in revolutionizing education — where knowledge meets
+                application, and every student is empowered to thrive in a
+                dynamic and ever-evolving world.
               </p>
               <div className="d-inline-block">
                 <Link

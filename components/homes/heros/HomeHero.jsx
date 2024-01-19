@@ -22,17 +22,17 @@ const masthead_info = [
   {
     id: 1,
     icon: masthead_icon_1,
-    text: "Over 12 million students",
+    text: "Over 70 students",
   },
   {
     id: 2,
     icon: masthead_icon_2,
-    text: "More than 60,000 courses",
+    text: "Learn essential things only",
   },
   {
     id: 3,
     icon: masthead_icon_3,
-    text: "Learn anything online",
+    text: "Learn anything fastly",
   },
 ];
 
