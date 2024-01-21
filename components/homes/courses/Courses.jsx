@@ -4,7 +4,11 @@ import React from "react";
 import CourceCard from "../courseCards/CourseCard";
 import { coursesData, catagories } from "../../../data/courses";
 import { useState, useEffect } from "react";
-export default function Courses() {
+
+import { client } from "../../../sanity/lib/client";
+
+export default function Courses({ data }) {
+  console.log("course data is : " + data);
   const [filtered, setFiltered] = useState();
   const [category, setCategory] = useState("All Categories");
   useEffect(() => {
@@ -12,7 +16,7 @@ export default function Courses() {
       setFiltered();
     } else {
       const filteredData = coursesData.filter(
-        (elm) => elm.category == category,
+        (elm) => elm.category == category
       );
       setFiltered(filteredData);
     }
@@ -23,9 +27,7 @@ export default function Courses() {
       <div className="row justify-center text-center">
         <div className="col-auto">
           <div className="sectionTitle ">
-            <h2 className="sectionTitle__title sm:text-24">
-              Our Courses
-            </h2>
+            <h2 className="sectionTitle__title sm:text-24">Our Courses</h2>
 
             {/* <p className="sectionTitle__text ">
               10,000+ unique online course list designs
@@ -75,3 +77,40 @@ export default function Courses() {
     </section>
   );
 }
+
+// Fetch data with getStaticProps
+export const getStaticProps = async () => {
+  const groqQuery = `
+    *[_type == "course"] {
+      courseName,
+      numberOfLessons,
+      duration,
+      level,
+      rating,
+      image,
+      author,
+      price
+    }
+  `;
+
+  client
+    .fetch(groqQuery)
+    .then((data) => {
+      console.log("Fetched data:", data);
+
+      return {
+        props: {
+          data,
+        },
+      };
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+
+  return {
+    props: {
+      data: [],
+    },
+  };
+};

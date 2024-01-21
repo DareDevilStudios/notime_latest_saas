@@ -94,7 +94,7 @@ export default function Menu({ allClasses, headerPosition }) {
             <li className="menu-item-has-children -has-mega-menu">
               <Link
                 data-barba
-                href="/courses-list-3"
+                href="/courses"
                 className={menuItem == "Courses" ? "activeMenu" : ""}
               >
                 Courses 

@@ -5,5 +5,5 @@ import {author} from './schemas/author'
 import {course} from './schemas/course'
 
 export const schema = {
-  types: [post, author, category, blockContent,course],
+  types: [course],
 }
