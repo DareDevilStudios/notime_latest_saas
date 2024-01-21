@@ -1,5 +1,5 @@
 // import HomeOne from "@/components/homes/home";
-import  Header  from "../components/layout/headers/Header";
+import Header from "../components/layout/headers/Header";
 // import MobileMenu from "@/components/layout/component/MobileMenu";
 
 import HomeHero from "../components/homes/heros/HomeHero";
@@ -19,37 +19,33 @@ import FooterOne from "../components/layout/footers/FooterOne";
 import Preloader from "@/components/common/Preloader";
 
 export const metadata = {
-  title: 'Home-1 || Educrat - Professional LMS Online Education Course NextJS Template',
+  title:
+    "Home-1 || Educrat - Professional LMS Online Education Course NextJS Template",
   description:
-    'Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.',
-  
-}
+    "Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.",
+};
 
 export default function HomePage() {
   return (
-    
     <>
-    <Preloader/>
-    <Header />
-    
-    <div className="content-wrapper  js-content-wrapper overflow-hidden">
-    
-      <HomeHero />
-      {/*<Brands/>*/}
-      {/*<Categories />*/}
-      <About/>
-      <WhyCourse/>
-      <Courses/>
-      <TestimonialsOne/>
-      {/*<FeaturesOne/>*/}
-      {/*<Instructors/>*/}
-      {/*<GetApp/>*/}
-      <Blog/>
-      {/*<Join/>*/}
-      <FooterOne/>
-      
-      
-    </div>
-  </>
+      <Preloader />
+      <Header />
+
+      <div className="content-wrapper  js-content-wrapper overflow-hidden">
+        <HomeHero />
+        {/*<Brands/>*/}
+        {/*<Categories />*/}
+        <About />
+        <WhyCourse />
+        <Courses />
+        <TestimonialsOne />
+        {/*<FeaturesOne/>*/}
+        {/*<Instructors/>*/}
+        {/*<GetApp/>*/}
+        <Blog />
+        {/*<Join/>*/}
+        <FooterOne />
+      </div>
+    </>
   );
 }
