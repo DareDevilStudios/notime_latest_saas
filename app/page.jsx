@@ -19,9 +19,9 @@ import FooterOne from "../components/layout/footers/FooterOne";
 import Preloader from "@/components/common/Preloader";
 
 export const metadata = {
-  title: 'Home-1 || Educrat - Professional LMS Online Education Course NextJS Template',
+  title: 'NoTime - Learn, Create, Succeed with NoTime',
   description:
-    'Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.',
+    'Explore expertise through NoTime\'s dynamic courses, certifications,and hands-on projects offered by top-tier educators and industry leaders.',
   
 }
 

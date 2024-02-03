@@ -15,8 +15,7 @@ export default function About() {
 
                 <div>
                   <p className="page-header__text">
-                    We’re on a mission to deliver engaging, curated courses at a
-                    reasonable price.
+                    Empowering Futures, Inspiring Success: Discover NoTime
                   </p>
                 </div>
               </div>
