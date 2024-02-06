@@ -1,27 +1,7 @@
-"use client";
-
 import React from "react";
 import CourceCard from "../courseCards/CourseCard";
-import { coursesData, catagories } from "../../../data/courses";
-import { useState, useEffect } from "react";
-
-import { client } from "../../../sanity/lib/client";
 
 export default function Courses({ data }) {
-  console.log("course data is : " + data);
-  const [filtered, setFiltered] = useState();
-  const [category, setCategory] = useState("All Categories");
-  useEffect(() => {
-    if (category == "All Categories") {
-      setFiltered();
-    } else {
-      const filteredData = coursesData.filter(
-        (elm) => elm.category == category
-      );
-      setFiltered(filteredData);
-    }
-  }, [category]);
-
   return (
     <section className="layout-pt-lg layout-pb-lg">
       <div className="row justify-center text-center">
@@ -60,8 +40,9 @@ export default function Courses({ data }) {
         data-aos-offset="80"
         data-aos-duration={800}
       >
-        {filtered
-          ? filtered.map((elm, index) => (
+        {
+          data &&
+            data.map((elm, index) => (
               <CourceCard
                 key={index}
                 data={elm}
@@ -70,47 +51,11 @@ export default function Courses({ data }) {
                 data-aos-duration={(index + 1) * 300}
               />
             ))
-          : coursesData
-              .slice(0, 8)
-              .map((elm, index) => <CourceCard key={index} data={elm} />)}
+          // : coursesData
+          //     .slice(0, 8)
+          //     .map((elm, index) => <CourceCard key={index} data={elm} />)}
+        }
       </div>
     </section>
   );
 }
-
-// Fetch data with getStaticProps
-export const getStaticProps = async () => {
-  const groqQuery = `
-    *[_type == "course"] {
-      courseName,
-      numberOfLessons,
-      duration,
-      level,
-      rating,
-      image,
-      author,
-      price
-    }
-  `;
-
-  client
-    .fetch(groqQuery)
-    .then((data) => {
-      console.log("Fetched data:", data);
-
-      return {
-        props: {
-          data,
-        },
-      };
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-    });
-
-  return {
-    props: {
-      data: [],
-    },
-  };
-};

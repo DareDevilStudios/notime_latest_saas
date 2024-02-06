@@ -48,11 +48,28 @@ export const course = {
         {
             name: 'author',
             title: 'Author',
-            type: 'string',
+            type: 'object',
+            fields: [
+                {
+                    name: 'author_name',
+                    title: 'Author Name',
+                    type: 'string',
+                },
+                {
+                    name: 'author_image',
+                    title: 'Author Image',
+                    type: 'image',
+                },
+            ],
         },
         {
             name: 'price',
             title: 'Price',
+            type: 'number',
+        },
+        {
+            name: 'actualprice',
+            title: 'Actual Price',
             type: 'number',
         },
         {

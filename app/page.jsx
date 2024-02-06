@@ -17,6 +17,7 @@ import Blog from "../components/homes/blogs/Blog";
 import Join from "../components/homes/join/Join";
 import FooterOne from "../components/layout/footers/FooterOne";
 import Preloader from "@/components/common/Preloader";
+import { client } from "@/sanity/lib/client";
 
 export const metadata = {
   title:
@@ -25,7 +26,36 @@ export const metadata = {
     "Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.",
 };
 
-export default function HomePage() {
+const groqQuery = `
+  *[_type == "course"] {
+    courseName,
+    numberOfLessons,
+    duration,
+    level,
+    rating,
+    image,
+    author,
+    price,
+    actualprice,
+  }
+`;
+
+async function getData() {
+  const res = client.fetch(groqQuery);
+  console.log(res)
+
+  // error
+  if (!res) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return res;
+}
+
+export default async function HomePage() {
+  const data = await getData();
   return (
     <>
       <Preloader />
@@ -37,7 +67,7 @@ export default function HomePage() {
         {/*<Categories />*/}
         <About />
         <WhyCourse />
-        <Courses />
+        <Courses data={data} />
         <TestimonialsOne />
         {/*<FeaturesOne/>*/}
         {/*<Instructors/>*/}
