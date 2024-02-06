@@ -127,12 +127,12 @@ export default function CourceCard({ data, index }) {
 
             <div className="coursesCard-footer">
               <div className="coursesCard-footer__author">
-                {/* <Image
+                <Image
                   width={30}
                   height={30}
                   src={urlForImage(data.author?.author_image)}
                   alt="image"
-                /> */}
+                />
                 <div>{data.author.author_name}</div>
               </div>
 
