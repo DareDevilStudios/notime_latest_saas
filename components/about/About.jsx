@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function About() {
   return (
     <>
-      <section id="aboutus" className="page-header -type-1">
+      <section id="aboutus" className="page-header -type-1 mt-50">
         <div className="container">
           <div className="page-header__content">
             <div className="row justify-center text-center">

@@ -98,8 +98,22 @@ export default function Menu({ allClasses, headerPosition }) {
                 className={menuItem == "Courses" ? "activeMenu" : ""}
               >
                 Courses 
+          
                 {/* <i className="icon-chevron-right text-13 ml-10"></i> */}
               </Link>
+              </li>
+              <li className="menu-item-has-children -has-mega-menu">
+              <Link
+                data-barba
+                href="/careers"
+                className={menuItem == "Careers" ? "activeMenu" : ""}
+              >
+                Careers 
+          
+                {/* <i className="icon-chevron-right text-13 ml-10"></i> */}
+              </Link>
+              
+            </li>
 
               {/* <div className="mega xl:d-none">
                 <div className="mega__menu">
@@ -230,7 +244,6 @@ export default function Menu({ allClasses, headerPosition }) {
                   </div>
                 </div>
               </div> */}
-            </li>
 
             {/* <li className="menu-item-has-children">
               <Link
