@@ -15,13 +15,13 @@ export default function WhyCourse() {
                 Why learn with our courses?
               </h2>
 
-              <p
+              {/* <p
                 className="sectionTitle__text text-white"
                 data-aos="fade-up"
                 data-aos-duration={800}
               >
                 Lorem ipsum dolor sit amet, consectetur.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

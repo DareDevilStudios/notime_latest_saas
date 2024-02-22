@@ -1,5 +1,5 @@
 // import HomeOne from "@/components/homes/home";
-import  Header  from "../components/layout/headers/Header";
+import Header from "../components/layout/headers/Header";
 // import MobileMenu from "@/components/layout/component/MobileMenu";
 
 import HomeHero from "../components/homes/heros/HomeHero";
@@ -27,29 +27,25 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    
     <>
-    <Preloader/>
-    <Header />
-    
-    <div className="content-wrapper  js-content-wrapper overflow-hidden">
-    
-      <HomeHero />
-      {/*<Brands/>*/}
-      {/*<Categories />*/}
-      <About/>
-      <WhyCourse/>
-      <Courses/>
-      <TestimonialsOne/>
-      {/*<FeaturesOne/>*/}
-      {/*<Instructors/>*/}
-      {/*<GetApp/>*/}
-      <Blog/>
-      {/*<Join/>*/}
-      <FooterOne/>
-      
-      
-    </div>
-  </>
+      <Preloader />
+      <Header />
+
+      <div className="content-wrapper  js-content-wrapper overflow-hidden">
+        <HomeHero />
+        {/*<Brands/>*/}
+        {/*<Categories />*/}
+        <About />
+        <WhyCourse />
+        <Courses />
+        <TestimonialsOne />
+        {/*<FeaturesOne/>*/}
+        {/*<Instructors/>*/}
+        {/*<GetApp/>*/}
+        <Blog />
+        {/*<Join/>*/}
+        <FooterOne />
+      </div>
+    </>
   );
 }

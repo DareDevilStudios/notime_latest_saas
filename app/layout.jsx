@@ -3,31 +3,35 @@
 import "../public/assets/sass/styles.scss";
 import "../public/assets/css/main.css"
 
-import { config } from "@fortawesome/fontawesome-svg-core";
+import {config} from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "react-calendar/dist/Calendar.css";
+
 config.autoAddCss = false;
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import {useEffect} from "react";
 import Context from "@/context/Context";
+import {MantineProvider, PillsInput, Pill} from '@mantine/core';
 
-export default function RootLayout({ children }) {
-  useEffect(() => {
-    AOS.init({
-      duration: 700,
-      offset: 120,
-      easing: "ease-out",
-      once: true,
-    });
-  }, []);
-  return (
-    <html lang="en" className="">
-      <head></head>
-      <body>
-        <Context> {children}</Context>
-      </body>
-    </html>
-  );
+export default function RootLayout({children}) {
+    useEffect(() => {
+        AOS.init({
+            duration: 700,
+            offset: 120,
+            easing: "ease-out",
+            once: true,
+        });
+    }, []);
+    return (
+        <html lang="en" className="">
+        <head></head>
+        <body>
+        <MantineProvider>
+            <Context> {children}</Context>
+        </MantineProvider>
+        </body>
+        </html>
+    );
 }

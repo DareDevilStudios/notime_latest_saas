@@ -3,19 +3,19 @@ export const steps = [
     id: 1,
     icon: "icon-online-learning-4 text-64 text-green-1",
     title: "01. Learn",
-    text: "Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit. Felis donec massa aliqua.",
+    text: "Getting bored by longer courses? Join us to learn the concept in very low time.",
   },
   {
     id: 2,
     icon: "icon-graduation-1 text-64 text-green-1",
-    title: "02. Graduate",
-    text: "Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit. Felis donec massa aliqua.",
+    title: "02. Showcase",
+    text: "Have you learned some skills and don't how much you have learned it? In NoTime you have a chance to showcase your skills.",
   },
   {
     id: 3,
     icon: "icon-working-at-home-2 text-64 text-green-1",
     title: "03. Work",
-    text: "Lorem ipsum dolor sit amet, consectetur dolorili adipiscing elit. Felis donec massa aliqua.",
+    text: "Need a chance to work in a real world environment? Join us",
   },
 ];
 
