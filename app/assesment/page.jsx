@@ -36,7 +36,7 @@ export default async function page() {
 
 // fetch data from /api/gemini using getData function
 async function getData() {
-    const res = await fetch(`http://localhost:3000/api/gemini`)
+    const res = await fetch(`${process.env.BASE_URL}/api/gemini`)
     const data = await res.json()
     console.log("checking",data)
     return data
