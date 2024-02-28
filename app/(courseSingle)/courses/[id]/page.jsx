@@ -16,9 +16,10 @@ export const metadata = {
     "Elevate your e-learning content with Educrat, the most impressive LMS template for online courses, education and LMS platforms.",
 };
 
-async function getData({ id }) {
+async function getData(id) {
+  console.log("id is " + id)
   const groqQuery = `
-    *[_type == "course" && _id == $id] {
+    *[_type == "course" && _id == $id][0] {
       _id,
       courseName,
       numberOfLessons,
@@ -29,10 +30,13 @@ async function getData({ id }) {
       author,
       price,
       actualprice,
+      description,
+      learnings,
+      prerequisites,
     }
   `;
   const res = await client.fetch(groqQuery, {
-    id: "a8c8d672-2143-4cfe-90ec-f60a9d7e45aa",
+    id: id,
   });
   console.log("response is :" + res);
 
@@ -47,9 +51,7 @@ async function getData({ id }) {
 }
 
 export default async function page({ params }) {
-  const { id } = params;
-  console.log(id);
-  const data = await getData(id);
+  const data = await getData(params.id);
   console.log("data is ", data);
   return (
     <div className="main-content  ">

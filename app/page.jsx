@@ -28,6 +28,7 @@ export const metadata = {
 
 const groqQuery = `
   *[_type == "course"] {
+    _id,
     courseName,
     numberOfLessons,
     duration,

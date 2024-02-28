@@ -44,7 +44,7 @@ export default function Courses({ data }) {
           data &&
             data.map((elm, index) => (
               <CourceCard
-                key={index}
+                key={elm._id}
                 data={elm}
                 index={index}
                 data-aos="fade-right"

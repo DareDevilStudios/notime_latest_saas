@@ -6,7 +6,8 @@ import { useState, useEffect } from "react";
 export default function Star({ star, textSize, textColor }) {
   const [rating, setRating] = useState([]);
   useEffect(() => {
-    for (let i = Math.round(star); i >= 1; i--) {
+    for (let i = 0; i <= Math.round(star); i++) {
+      // console.log("i = ", i);
       setRating((pre) => [...pre, "star"]);
     }
   }, []);

@@ -2,7 +2,7 @@
 import React from "react";
 import { reviews } from "@/data/aboutcourses";
 import Star from "../common/Star";
-export default function Reviews() {
+export default function Reviews({rating}) {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -14,9 +14,9 @@ export default function Reviews() {
           <div className="row x-gap-10 y-gap-10 pt-30">
             <div className="col-md-4">
               <div className="d-flex items-center justify-center flex-column py-50 text-center bg-light-6 rounded-8">
-                <div className="text-60 lh-11 text-dark-1 fw-500">4.8</div>
+                <div className="text-60 lh-11 text-dark-1 fw-500">{rating}.0</div>
                 <div className="d-flex x-gap-5 mt-10">
-                  <Star star={5} textSize={"text-11"} />
+                  <Star star={1} textSize={"text-11"} />
                 </div>
                 <div className="mt-10">Course Rating</div>
               </div>

@@ -17,13 +17,18 @@ const menuItems = [
   { id: 4, href: "#reviews", text: "Reviews", isActive: false },
 ];
 
-export default function CourseDetailsTwo({ id }) {
-  console.log(id)
+export default function CourseDetailsTwo({ id, data }) {
+  if (typeof data.rating === "number" && !Number.isInteger(data.rating)) {
+    // Check if data.ratingCount is a float
+    data.rating = Math.round(data.rating); // Convert float to integer
+  }
+  console.log(data);
+  // console.log(id)
   const [pageItem, setPageItem] = useState(coursesData[0]);
 
   useEffect(() => {
     const data = coursesData.filter((elm) => elm.id == id)[0] || coursesData[0];
-    console.log(data);
+    // console.log(data);
     setPageItem(data);
   }, []);
 
@@ -61,47 +66,44 @@ export default function CourseDetailsTwo({ id }) {
 
                 <div>
                   <h1 className="text-30 lh-14 text-white pr-60 lg:pr-0">
-                    {pageItem.title}
+                    {data?.courseName}
                   </h1>
                 </div>
 
-                <p className="col-xl-9 mt-20">
-                  Use XD to get a job in UI Design, User Interface, User
-                  Experience design, UX design & Web Design
+                <p className="col-xl-8 mt-20">
+                  {data.description.slice(0, 350)}....{" "}
+                  <a href="#overview">Know more</a>{" "}
                 </p>
 
                 <div className="d-flex x-gap-30 y-gap-10 items-center flex-wrap pt-20">
                   <div className="d-flex items-center">
                     <div className="text-14 lh-1 text-yellow-1 mr-10">
-                      {pageItem.rating}
+                      {data.rating}
                     </div>
                     <div className="d-flex x-gap-5 items-center">
-                      <Star star={5} textSize={"text-11"} />
+                      <Star star={1} textSize={"text-11"} />
                     </div>
                     <div className="text-14 lh-1 text-light-1 ml-10">
-                      ({pageItem.ratingCount})
+                      ({data.rating})
                     </div>
                   </div>
 
                   <div className="d-flex items-center text-light-1">
                     <div className="icon icon-person-3 text-13"></div>
                     <div className="text-14 ml-8">
-                      853 enrolled on this course
+                      20 enrolled on this course
                     </div>
                   </div>
 
-                  <div className="d-flex items-center text-light-1">
+                  {/* <div className="d-flex items-center text-light-1">
                     <div className="icon icon-wall-clock text-13"></div>
                     <div className="text-14 ml-8">Last updated 11/2021</div>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="d-flex items-center pt-20">
                   <div
-                    className="bg-image size-30 rounded-full js-lazy"
-                    style={{
-                      backgroundImage: `url(${pageItem.authorImageSrc})`,
-                    }}
+                    className="bg-image size-30 rounded-full js-lazy "
                   ></div>
                   <div className="text-14 lh-1 ml-10">
                     {pageItem.authorName}
@@ -112,6 +114,7 @@ export default function CourseDetailsTwo({ id }) {
           </div>
         </div>
       </section>
+
       <PinContent pageItem={pageItem} />
 
       <section className="layout-pt-md layout-pb-md">
@@ -135,10 +138,14 @@ export default function CourseDetailsTwo({ id }) {
                 </div>
               </div>
 
-              <Overview />
-              <CourseContent />
-              <Instractor />
-              <Reviews />
+              {data && (
+                <>
+                  <Overview description={data.description} features={data.learnings} prerequisites={data.prerequisites} />
+                  <CourseContent  />
+                  <Instractor />
+                  <Reviews rating={data.rating} />
+                </>
+              )}
             </div>
           </div>
         </div>
